@@ -11,6 +11,8 @@
     --main-min-width: 350px;
     --main-width: 70vw;
     --main-max-width: 800px;
+
+    --gap: 10px;
 }
 
 
@@ -39,7 +41,7 @@ main{
     justify-self: center;
     margin: var(--gap);
     padding: var(--gap);
-    background-color: darkgoldenrod;
+    background-color: rgb(205, 203, 199);
     min-width: var(--main-min-width);
     width: var(--main-width);
     max-width: var(--main-max-width);
@@ -47,20 +49,41 @@ main{
 
 section{
     background-color: gray;
+    padding: var(--gap);
+
 }
 
 aside{
     background-color: orangered;
+    color: whitesmoke;
+    padding: var(--gap);
 }
 
 footer{
     background-color: fuchsia;
+    color: whitesmoke;
+    padding: var(--gap);
+
 }
 
 ul{
     list-style: none;
     color: white;
     font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: red;
+    transform: scale(-5%, -5%);
+    filter: drop-shadow(
+        2px 2px 6px whitesmoke
+    );
+    transition: all ease-in 300ms;
+    
 }
 
 .border{
@@ -75,7 +98,8 @@ ul{
 
 .center-flex{
     justify-content: center;
-    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 
 /*Mobile First*/
@@ -103,8 +127,6 @@ ul{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
-        text-align: center;
         font-size: large;
         font-weight: 900;
         min-width: var(--content-min-width);
